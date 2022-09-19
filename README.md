@@ -77,3 +77,14 @@ adapun variabel yang digunakan pada dataset ini, adalah :
 
 ![image](https://user-images.githubusercontent.com/93527916/191035702-79e90fc7-0ce0-490f-a39b-b783659fa2e4.png)
 
+### Evaluation
+
+Disini penulis menggunakan metric **Precision** untuk mengukur jumlah prediksi. adapun hasil yang saya dapatkan adalah 
+
+![image](https://user-images.githubusercontent.com/93527916/191041571-6f2c556c-5e7f-41c8-a9ae-1bd4297a2eae.png)
+
+dapat dilihat pada gambar tersebut bahwa prediksi saya tentang tipe laptop tersebut adalah 100%
+
+#### Conclusion 
+
+berdasarkan hasil laporan tersebut, hasil yang penulis dapatkan sesuai dengan apa yang diinginkan. dengan menggunakan _content based filtering_ . penulis berhasil mengembangkan sistem rekomendasi berdasarkan aktivitas masa lalu. mungkin jika penulis menerapkan _collaborative based filtering_, mungkin nantinya penulis dapat merekomendasikan laptop tidak hanya berdasarkan tipe laptopnya saja
