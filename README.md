@@ -34,7 +34,7 @@ dari permasalahan tersebut. adapun tujuan yang akan dicapai, diantaranya:
 
 Dataset yang digunakan pada proyek ini adalah **Laptop Price**. dataset ini didapatkan dari situs kaggle dengan link : https://www.kaggle.com/datasets/muhammetvarl/laptop-price
 
-adapun variabel yang digunakan pada dataset ini, adalah : 
+Dataset ini memiliki total 1303 data dengan 13 kolom, dan memiliki 4 missing value, adapun variabel yang digunakan pada dataset ini, adalah : 
 
 * Laptop_id : kode untuk identifikasi laptop
 * Company : Produsen laptop
@@ -56,12 +56,33 @@ adapun variabel yang digunakan pada dataset ini, adalah :
 
 ![image](https://user-images.githubusercontent.com/93527916/191031043-ce96abf6-6b24-4fb6-8fea-dee8c0561294.png)
 
+dari grafik tersebut, dapat disimpulkan bahwa Notebook memiliki jumlah terbanyak, yaitu sekitar 700 unit. dan dapat dilihat bahwa Netbook memiliki jumlah paling sedikit, yaitu sekitar 30 unit
+
 ### Data Preparation
 
 * Sort_Values : mengurutkan dataframe laptop berdasarkan Product. Hal ini untuk memudahkan kita dalam mencari data berdasarkan abjadnya
+
+![image](https://user-images.githubusercontent.com/93527916/191127327-d0068133-8184-44f2-8e28-f5410d1495a9.png)
+
+dari gambar tersebut, dataframe Product sudah terurut sesuai abjad. Dapat dilihat bahwa data pertama kali yang muncul adalah '110-15ACL (A6-7310/4GB/500GB/W10)'
+
 * Drop_Duplicate : untuk menghapus data duplikasi pada laptop. dalam laporan ini, penulis menghapus duplikasi pada dataframe Product
-* Konversi Data : mengubah beberapa dataframe menjadi list. di laporan ini penulis mengubah Company, Product, dan TypeName menjadi list. 
+
+![image](https://user-images.githubusercontent.com/93527916/191127565-66cf883c-7cd4-45ff-b392-a0ab70b15d1a.png)
+
+dari gambar tersebut, dapat dilihat bahwa jumlah data kita berkurang. yang semulanya adalah 1303 sekarang menjadi 618. hal tersebut terjadi karena data yang terduplikat akan terhapus.
+
+* Tolist : untuk mengubah beberapa dataframe menjadi list. di laporan ini penulis mengubah Company, Product, dan TypeName menjadi list. 
+
+![image](https://user-images.githubusercontent.com/93527916/191127817-b6f51f9e-7c6d-4291-933e-d932d980e3ea.png)
+
+dari gambar tersebut, penulis mengecek apakah ke tiga dataframe tersebut memiliki jumlah yang sama dan apakah sudah berubah menjadi list
+
 * Membuat Dictionary : ambil data yang sudah dikonversikan tersebut lalu satukan dalam dictionary. hal ini berguna agar dataframe yang terpanggil hanya lah yang sudah dikonversi
+
+![image](https://user-images.githubusercontent.com/93527916/191128007-40728441-fc71-4100-93a1-31c2c2316e48.png)
+
+dari gambar tersebut, sekarang ada satu tabel yang hanya memiliki 3 dataframe yang telah kita ubah menjadi list. yaitu Company, Product, TypeName
 
 ### Modeling and Result
 
@@ -88,3 +109,7 @@ dapat dilihat pada gambar tersebut bahwa prediksi saya tentang tipe laptop terse
 #### Conclusion 
 
 berdasarkan hasil laporan tersebut, hasil yang penulis dapatkan sesuai dengan apa yang diinginkan. dengan menggunakan _content based filtering_ . penulis berhasil mengembangkan sistem rekomendasi berdasarkan aktivitas masa lalu. mungkin jika penulis menerapkan _collaborative based filtering_, mungkin nantinya penulis dapat merekomendasikan laptop tidak hanya berdasarkan tipe laptopnya saja
+
+### References
+
+Koo Ping Shung(2018). Accuracy, Precision, Recall or F1?. [https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9]
