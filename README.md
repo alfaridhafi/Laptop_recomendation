@@ -34,7 +34,7 @@ dari permasalahan tersebut. adapun tujuan yang akan dicapai, diantaranya:
 
 Dataset yang digunakan pada proyek ini adalah **Laptop Price**. dataset ini didapatkan dari situs kaggle dengan link : https://www.kaggle.com/datasets/muhammetvarl/laptop-price
 
-Dataset ini memiliki total 1303 data dengan 13 kolom, dan memiliki 4 missing value, adapun variabel yang digunakan pada dataset ini, adalah : 
+Dataset ini memiliki total 1303 data dengan 13 kolom, dan memiliki 0 missing value, adapun variabel yang digunakan pada dataset ini, adalah : 
 
 * Laptop_id : kode untuk identifikasi laptop
 * Company : Produsen laptop
@@ -62,43 +62,334 @@ dari grafik tersebut, dapat disimpulkan bahwa Notebook memiliki jumlah terbanyak
 
 * Sort_Values : mengurutkan dataframe laptop berdasarkan Product. Hal ini untuk memudahkan kita dalam mencari data berdasarkan abjadnya
 
-![image](https://user-images.githubusercontent.com/93527916/191127327-d0068133-8184-44f2-8e28-f5410d1495a9.png)
+<table>
+    <tr>
+        <td> Laptop_Id </td> 
+        <td> Company </td> 
+        <td> Product </td> 
+        <td> TypeName </td> 
+        <td> Inches </td> 
+        <td> ScreenResolution </td>
+        <td> CPU </td>
+        <td> RAM </td>
+        <td> Memory </td>
+        <td> GPU </td>
+        <td> OpSys </td>
+        <td> Weight </td>
+        <td> price_euros </td>
+    </tr>
+    <tr>
+        <td> 725 </td> 
+        <td> Lenovo </td> 
+        <td> 110-15ACL (A6-7310/4GB/500GB/W10) 	 </td> 
+        <td> Notebook</td> 
+        <td> 15.6 </td> 
+        <td> 1366x768 </td>
+        <td> AMD A6-Series 7310 2GHz 	 </td>
+        <td> 4GB 	 </td>
+        <td> 500GB HDD </td>
+        <td> AMD Radeon R4 </td>
+        <td> Windows 10 	 </td>
+        <td> 2.19kg </td>
+        <td> 298.0 </td>
+    </tr>
+     <tr>
+        <td> 578 </td> 
+        <td> HP </td> 
+        <td> 14-am079na (N3710/8GB/2TB/W10) 	 </td> 
+        <td> Notebook</td> 
+        <td> 14.0 </td> 
+        <td> 1366x768 </td>
+        <td> Intel Pentium Quad Core N3710 1.6GHz  </td>
+        <td> 8GB 	 </td>
+        <td> 2TB HDD </td>
+        <td> Intel HD Graphics 405 </td>
+        <td> Windows 10 	 </td>
+        <td> 1.94kg </td>
+        <td> 389.0 </td>
+    </tr>
+    <tr>
+        <td> 1291 </td> 
+        <td> HP </td> 
+        <td> 15-AC110nv (i7-6500U/6GB/1TB/Radeon) </td> 
+        <td> Notebook</td> 
+        <td> 15.6 </td> 
+        <td> 1366x768 </td>
+        <td> Intel Core i7 6500U 2.5GHz  </td>
+        <td> 6GB 	 </td>
+        <td> 1TB HDD </td>
+        <td> AMD Radeon R5 M330 </td>
+        <td> Windows 10 	 </td>
+        <td> 2.19kg </td>
+        <td> 764.0 </td>
+    </tr>
+    <tr>
+        <td> 1305 </td> 
+        <td> HP </td> 
+        <td> 15-AC110nv (i7-6500U/6GB/1TB/Radeon) </td> 
+        <td> Notebook</td> 
+        <td> 15.6 </td> 
+        <td> 1366x768 </td>
+        <td> Intel Core i7 6500U 2.5GHz  </td>
+        <td> 6GB 	 </td>
+        <td> 1TB HDD </td>
+        <td> AMD Radeon R5 M330 </td>
+        <td> Windows 10 	 </td>
+        <td> 2.19kg </td>
+        <td> 764.0 </td>
+    </tr>
+    <tr>
+        <td> 1319 </td> 
+        <td> HP </td> 
+        <td> 15-AC110nv (i7-6500U/6GB/1TB/Radeon) </td> 
+        <td> Notebook</td> 
+        <td> 15.6 </td> 
+        <td> 1366x768 </td>
+        <td> Intel Core i7 6500U 2.5GHz  </td>
+        <td> 6GB 	 </td>
+        <td> 1TB HDD </td>
+        <td> AMD Radeon R5 M330 </td>
+        <td> Windows 10 	 </td>
+        <td> 2.19kg </td>
+        <td> 764.0 </td>
+    </tr>
+        
+        
+        
+ </table>
 
-dari gambar tersebut, dataframe Product sudah terurut sesuai abjad. Dapat dilihat bahwa data pertama kali yang muncul adalah '110-15ACL (A6-7310/4GB/500GB/W10)'
+dari gambar tersebut, dataframe Product sudah terurut sesuai abjad. Dapat dilihat bahwa data pertama kali yang muncul adalah '110-15ACL (A6-7310/4GB/500GB/W10)'. namun pada data tersebut masih ada duplikat nya. jadi tahap selanjutnya akan dihapus
 
 * Drop_Duplicate : untuk menghapus data duplikasi pada laptop. dalam laporan ini, penulis menghapus duplikasi pada dataframe Product
 
-![image](https://user-images.githubusercontent.com/93527916/191127565-66cf883c-7cd4-45ff-b392-a0ab70b15d1a.png)
+<table>
+    <tr>
+        <td> Laptop_Id </td> 
+        <td> Company </td> 
+        <td> Product </td> 
+        <td> TypeName </td> 
+        <td> Inches </td> 
+        <td> ScreenResolution </td>
+        <td> CPU </td>
+        <td> RAM </td>
+        <td> Memory </td>
+        <td> GPU </td>
+        <td> OpSys </td>
+        <td> Weight </td>
+        <td> price_euros </td>
+    </tr>
+    <tr>
+        <td> 1 </td> 
+        <td> Apple </td> 
+        <td> MacBook Pro</td> 
+        <td> Ultrabook</td> 
+        <td> 13.3 </td> 
+        <td> IPS Panel Retina Display 2560x1600 </td>
+        <td> Intel Core i5 2.3GHz</td>
+        <td> 8GB 	 </td>
+        <td> 128GB SSD </td>
+        <td> Intel Iris Plus Graphics 640 	 </td>
+        <td> macOS </td>
+        <td> 1.37kg 	 </td>
+        <td> 1339.69 </td>
+    </tr>
+     <tr>
+        <td> 2 </td> 
+        <td> Apple </td> 
+        <td> Macbook Air </td> 
+        <td> Notebook</td> 
+        <td> 13.3 </td> 
+        <td> 1440x900 </td>
+        <td> Intel Core i5 1.8GHz  </td>
+        <td> 8GB 	 </td>
+        <td> 128GB Flash Storage </td>
+        <td> Intel HD Graphics 6000 </td>
+        <td> macOS 	 </td>
+        <td> 1.34kg </td>
+        <td> 898.94 </td>
+    </tr>
+    <tr>
+     <tr>
+        <td> 3 </td> 
+        <td> HP </td> 
+        <td> 250 G6 </td> 
+        <td> Notebook</td> 
+        <td> 15.6 </td> 
+        <td> Full HD 1920x1080 </td>
+        <td> Intel Core i5 7200U 2.5GHzz  </td>
+        <td> 8GB 	 </td>
+        <td> 256GB SSD </td>
+        <td> Intel HD Graphics 620 </td>
+        <td> No OS </td>
+        <td> 1.86kg </td>
+        <td> 575.00 </td>
+    </tr>
+        <td> 6 </td> 
+        <td> Acer </td> 
+        <td> Aspire 3 </td> 
+        <td> Notebook</td> 
+        <td> 15.6 </td> 
+        <td> 1366x768 </td>
+        <td> AMD A9-Series 9420 3GHz  </td>
+        <td> 4GB 	 </td>
+        <td> 500GB HDD </td>
+        <td> AMD Radeon R5  </td>
+        <td> Windows 10 	 </td>
+        <td> 2.1kg </td>
+        <td> 400.00 </td>
+    </tr>
+    <tr>
+        <td> 9 </td> 
+        <td> Asus </td> 
+        <td> ZenBook UX430UN </td> 
+        <td> Ultrabook </td> 
+        <td> 14.0 </td> 
+        <td> Full HD 1920x1080 </td>
+        <td> Intel Core i7 8550U 1.8GH  </td>
+        <td> 16GB 	 </td>
+        <td> 512GB SSD </td>
+        <td> Nvidia GeForce MX150 </td>
+        <td> Windows 10 	 </td>
+        <td> 1.3kg </td>
+        <td> 1495.0 </td>
+    </tr>
+        
+        
+        
+ </table>
 
 dari gambar tersebut, dapat dilihat bahwa jumlah data kita berkurang. yang semulanya adalah 1303 sekarang menjadi 618. hal tersebut terjadi karena data yang terduplikat akan terhapus.
 
-* Tolist : untuk mengubah beberapa dataframe menjadi list. di laporan ini penulis mengubah Company, Product, dan TypeName menjadi list. 
-
-![image](https://user-images.githubusercontent.com/93527916/191127817-b6f51f9e-7c6d-4291-933e-d932d980e3ea.png)
-
-dari gambar tersebut, penulis mengecek apakah ke tiga dataframe tersebut memiliki jumlah yang sama dan apakah sudah berubah menjadi list
+* Tolist : untuk mengubah beberapa dataframe menjadi list. cara kerja nya cukup mudah, pilih dataframe yang ingin dikonversi, lalu tambahkan tolist() di belakangnya. otomatis tipe data nya akan berubah ke tipe list. Di laporan ini penulis mengubah Company, Product, dan TypeName menjadi list. 
 
 * Membuat Dictionary : ambil data yang sudah dikonversikan tersebut lalu satukan dalam dictionary. hal ini berguna agar dataframe yang terpanggil hanya lah yang sudah dikonversi
 
-![image](https://user-images.githubusercontent.com/93527916/191128007-40728441-fc71-4100-93a1-31c2c2316e48.png)
+<table>
+    <tr>
+        <td> Company </td> 
+        <td> Product </td> 
+        <td> TypeName </td> 
+     </tr>
+      <tr>
+        <td> Apple </td> 
+        <td> Macbook pro </td> 
+        <td> Ultrabook </td> 
+     </tr>
+     <tr>
+        <td> Apple </td> 
+        <td> Macbook Air </td> 
+        <td> Ultrabook </td> 
+     </tr>
+      <tr>
+        <td> Hp </td> 
+        <td> 250 G6 </td> 
+        <td> Notebook </td> 
+     </tr>
+     <tr>
+        <td> Acer </td> 
+        <td> Aspire 3 </td> 
+        <td> Notebook </td> 
+     </tr>
+     <tr>
+        <td> Asus </td> 
+        <td> ZenBook UX430UN </td> 
+        <td> Ultrabook </td> 
+     </tr>
+</table>
 
 dari gambar tersebut, sekarang ada satu tabel yang hanya memiliki 3 dataframe yang telah kita ubah menjadi list. yaitu Company, Product, TypeName
 
 ### Modeling and Result
 
-* penulis menggunakan TF-IDF Vectorizer. Teknik tersebut digunakan untuk menemukan representasi fitur penting dari setiap kategori laptop
+* pertama penulis membuat variabel 'data' yang berisi data dari 'laptop_new' yang telah dibuat sebelumnya. lalu ambil 5 sample 
 
-![image](https://user-images.githubusercontent.com/93527916/191034856-a1426d43-10d4-45c1-9341-422f657bc8c8.png)
+<table>
+    <tr>
+        <td> Company </td> 
+        <td> Product </td> 
+        <td> TypeName </td> 
+     </tr>
+      <tr>
+        <td> Asus </td> 
+        <td> ZenBook UX410UA-GV183T </td> 
+        <td> Notebook 	 </td> 
+     </tr>
+     <tr>
+        <td> HP </td> 
+        <td> 7-ak002nv (A10-9620P/6GB/2TB/Radeon </td> 
+        <td> Notebook </td> 
+     </tr>
+      <tr>
+        <td> Samsung 	 </td> 
+        <td> Chromebook 3 	 </td> 
+        <td> Netbook </td> 
+     </tr>
+     <tr>
+        <td> HP </td> 
+        <td> ProBook 450 </td> 
+        <td> Notebook </td> 
+     </tr>
+     <tr>
+        <td> Asus </td> 
+        <td> ZenBook UX530UQ-PRO </td> 
+        <td> Ultrabook </td> 
+     </tr>
+</table>
 
-* penulis juga menggunakan algoritma cosine similarity. hal tersebut bertujuan untuk menghitung kesamaan (similarity) antar product
 
-![image](https://user-images.githubusercontent.com/93527916/191035314-eb116a6c-38e7-4ca8-a785-6969580c533b.png)
+
+
+* penulis menggunakan TF-IDF Vectorizer. Teknik tersebut digunakan untuk menemukan representasi fitur penting dari setiap kategori laptop. algoritma ini menggabungkan 2 konsep, yaitu Term Frequency (TM) dan Invers Document Frequncy (IDF). setelah itu diubah dalam bentuk vektor
+
+* penulis juga menggunakan algoritma cosine similarity. hal tersebut bertujuan untuk menghitung kesamaan (similarity) antar product. cara kerja dari algoritma ini adalah mencari tingkat kemiripan teks pada  sentence/kalimat. lalu Kemiripan teks bisa kita gunakan untuk membuat steganografi ataupun steganalysis linguistik
 
 * lalu untuk hasil akhir nya, ketika penulis mencoba mencari rekomendasi laptop dengan tipe laptop 'Netbook'. maka akan muncul rekomendasi produk lainnya dengan tipe laptop yang sama
 
-![image](https://user-images.githubusercontent.com/93527916/191035702-79e90fc7-0ce0-490f-a39b-b783659fa2e4.png)
+<table>
+    <tr>
+        <td> Product </td> 
+        <td> Company </td> 
+        <td> TypeName </td> 
+     </tr>
+      <tr>
+        <td> TravelMate B117-M </td> 
+        <td> Acer 	 </td> 
+        <td> Netbook 	 </td> 
+     </tr>
+     <tr>
+        <td> Chromebook 3</td> 
+        <td> Samsung  </td> 
+        <td> Netbook </td> 
+     </tr>
+     <tr>
+        <td>  	VivoBook E201NA </td> 
+        <td> Asus </td> 
+        <td> Netbook </td> 
+     </tr>
+     <tr>
+        <td> Chromebook N23 </td> 
+        <td> Lenovo </td> 
+        <td> Netbook </td> 
+     </tr>
+</table>
 
 ### Evaluation
+
+Pertama penulis mengambil sample product 'Latitude 3180' untuk mengetahui tipe laptop tersebut.
+
+<table>
+    <tr>
+        <td> Company </td> 
+        <td> Product </td> 
+        <td> TypeName </td> 
+     </tr>
+      <tr>
+        <td> Lenovo </td> 
+        <td> Latitude 3180 	 </td> 
+        <td> Netbook 	 </td> 
+     </tr>
+</table>
+
 
 Disini penulis menggunakan metric **Precision** untuk mengukur jumlah prediksi. adapun hasil yang saya dapatkan adalah 
 
@@ -112,4 +403,6 @@ berdasarkan hasil laporan tersebut, hasil yang penulis dapatkan sesuai dengan ap
 
 ### References
 
-Koo Ping Shung(2018). Accuracy, Precision, Recall or F1?. [https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9]
+* Koo Ping Shung(2018). Accuracy, Precision, Recall or F1?. [https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9]
+* Luthfi Ramadhan(2020). TF-IDF Simplified. [https://towardsdatascience.com/tf-idf-simplified-aba19d5f5530]
+* Hendroprasetyo(2020). Perbedaan Cosine Similarity dan Cosine Distance [https://hendroprasetyo.com/perbedaan-cosine-similarity-dan-cosine-distance/#.YykJQ7RBw2w]
